@@ -160,7 +160,7 @@ module S3SwfUpload
       out << "foo: 'bar'"              
       out << "});\n"
       out << "</script>\n"
-      out << "<div id=\"s3_swf_#{@count}\">\n"
+      out << "<div id=\"s3_swf_#{object_name_prefix}_#{@count}\">\n"
       out << "Please <a href=\"http://www.adobe.com/go/getflashplayer\">Update</a> your Flash Player to Flash v#{flashVersion} or higher...\n"
       out << "</div>\n"
       
