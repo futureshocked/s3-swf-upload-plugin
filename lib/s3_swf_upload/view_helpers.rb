@@ -75,7 +75,7 @@ module S3SwfUpload
       out << "buttonUpPath: '#{buttonUpPath}',\n" if buttonUpPath
       out << "buttonOverPath: '#{buttonOverPath}',\n" if buttonOverPath
       out << "buttonDownPath: '#{buttonDownPath}',\n" if buttonDownPath
-      out << "swfVarObj: 's3_swf_#{@count}_object',\n"
+      out << "swfVarObj: 's3_swf_#{object_name_prefix}_#{@count}_object',\n"
        
       out << %(onFileAdd: function(file){
                 #{onFileAdd}
