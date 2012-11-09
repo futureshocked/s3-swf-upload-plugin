@@ -1,6 +1,7 @@
 module S3SwfUpload
   module ViewHelpers
     def s3_swf_upload_tag(options = {})
+      object_name_prefix      = options[:object_name_prefix] || ''
       buttonWidth             = options[:buttonWidth]  || 100
       buttonHeight            = options[:buttonHeight] || 30
     	flashVersion            = options[:height] || '9.0.0'
@@ -59,7 +60,7 @@ module S3SwfUpload
       end
 
       out << "\n<script type=\"text/javascript\">\n"
-      out << "var s3_swf_#{@count}_object = s3_swf_init('s3_swf_#{@count}', {\n"
+      out << "var s3_swf_#{object_name_prefix}_#{@count}_object = s3_swf_init('s3_swf_#{object_name_prefix}_#{@count}', {\n"
       out << "buttonWidth: #{buttonWidth},\n" if buttonWidth
       out << "buttonHeight: #{buttonHeight},\n" if buttonHeight
       out << "flashVersion: '#{flashVersion}',\n" if flashVersion
