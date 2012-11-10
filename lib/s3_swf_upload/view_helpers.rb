@@ -48,7 +48,7 @@ module S3SwfUpload
     	onUploadError						= options[:onUploadError] || false
     	
       @include_s3_upload ||= false 
-      @count ||= 1
+      @count = 1
       
       out = ''
 
