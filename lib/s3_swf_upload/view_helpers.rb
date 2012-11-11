@@ -164,7 +164,7 @@ module S3SwfUpload
       out << "Please <a href=\"http://www.adobe.com/go/getflashplayer\">Update</a> your Flash Player to Flash v#{flashVersion} or higher...\n"
       out << "</div>\n"
       
-      @count += 1
+      # @count += 1
       out
     end
 
